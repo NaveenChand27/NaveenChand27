@@ -1,9 +1,5 @@
 ---
- - hosts: slave2
+ - hosts: localhost
    become: true
    tasks:
-     - name: deploying war file on slave2 server
-       copy: 
-         src: /var/lib/jenkins/workspace/ci-cd/gameoflife-web/target/gameoflife.war 
-         dest: /root/apache-tomcat-8.5.78/webapps
-         remote_src: no
+      - ping
